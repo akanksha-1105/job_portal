@@ -1,0 +1,21 @@
+<%render 'shared1/navbar' %>
+<p id="notice"><%= notice %></p>
+<div style= "margin-top: 50px">
+  <h1>Jobposts</h1>
+
+  <div class="row">
+    <% @jobposts.each do |jobpost| %>
+    <div class="card col-sm-2" style="width: 39rem;margin-top: 40px">
+      <div class="card-body">
+        <h5 class="card-title"><%= jobpost.title %></h5>
+        <p class="card-text"><%= jobpost.company %></p>
+        <p class="card-text"><%= jobpost.salary %></p>
+        <li><%= link_to "details", jobpost%></li>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
+
