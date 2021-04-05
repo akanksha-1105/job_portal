@@ -1,0 +1,11 @@
+<% if current_user.employer_? %>
+    <% @applicants.each do |applicants| %>
+  <li> <%= link_to(applicants.user.email, applicants.user) %></li>
+<% end %>
+</ul>
+<br>
+<br>
+<% else %>
+    <%= link_to 'Login/SignUp', new_user_session_path %>
+<% end %>
+
